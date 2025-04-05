@@ -39,10 +39,15 @@
                 <span>GitHub</span>
                 </a>
                 <!-- Email -->
-                <a href="kannu.2097@gmail.com" class="icon-link">
-                <i class="fas fa-envelope fa-2x"></i>
-                <span>Mail</span>
+                <!-- Email -->
+                <a href="javascript:void(0)" class="icon-link" onclick="copyEmail()">
+                  <i class="fas fa-envelope fa-2x"></i>
+                  <span>kannu.2097@gmail.com</span>
                 </a>
+
+                <!-- Hidden email to be copied -->
+                <span id="email-text" style="display: none;">kannu.2097@gmail.com</span>
+                
                 <!-- LinkedIn -->
                 <a href="https://www.linkedin.com/in/dhananjaygangwar/" class="icon-link" target="_blank">
                 <i class="fab fa-linkedin fa-2x"></i>
@@ -73,7 +78,7 @@
         <div class="card mb-4">
           <div class="card-body">
             <h5 class="card-title">About Me</h5>
-            <p>I m a passionate self-taught web developer focused on building clean and functional websites using .NET, C#, and JavaScript.</p>
+            <p>I m a passionate web developer focused on building clean and functional websites using .NET, C#, and JavaScript.</p>
           </div>
         </div>
   
@@ -91,9 +96,29 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById("email-text").innerText;
+      const msg = document.getElementById("copy-msg");
+  
+      navigator.clipboard.writeText(email).then(() => {
+        // Show the message
+        msg.style.display = "inline";
+  
+        // Clear previous timeout (if someone clicks fast multiple times)
+        if (msg.timeoutId) clearTimeout(msg.timeoutId);
+  
+        // Set new timeout to hide the message
+        msg.timeoutId = setTimeout(() => {
+          msg.style.display = "none";
+        }, 1500);
+      });
+    }
+  </script>
+  
 </body>
 
 
-  </body>
 </html>
 
