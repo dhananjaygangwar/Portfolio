@@ -1,43 +1,46 @@
+import Navbar from "./components/Navbar";
+
 export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen">
 
-      {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-black border-b border-gray-800 z-50">
-        <div className="max-w-5xl mx-auto flex justify-between items-center p-4">
-          <h1 className="font-bold">Dhananjay</h1>
-          <div className="space-x-6 text-sm">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
+      
+      <Navbar />
+     
 
       {/* Hero */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-4">
-        <h2 className="text-4xl md:text-6xl font-bold mb-6">
-          Hi, I’m Dhananjay Gangwar.
-        </h2>
-        <p className="text-gray-400 max-w-xl mb-8">
-          Backend-focused Full-Stack Developer building scalable APIs 
-          and clean web applications using .NET and JavaScript.
-        </p>
+      <section
+        className="h-screen flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/onepiece.jpg')" }}
+      >
+        <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl p-10 text-center text-white max-w-2xl shadow-xl">
 
-        <div className="space-x-4">
-          <a
-            href="#contact"
-            className="bg-white text-black px-6 py-2 rounded-lg"
-          >
-            Contact Me
-          </a>
-          <a
-            href="https://github.com/YOUR_GITHUB"
-            target="_blank"
-            className="border border-white px-6 py-2 rounded-lg"
-          >
-            GitHub
-          </a>
+          <h2 className="text-5xl font-bold mb-6">
+            Hey There! I am Dhananjay
+          </h2>
+
+          <p className="text-gray-200 mb-8">
+            Backend-focused Full-Stack Developer building scalable APIs and
+            clean web applications using .NET and JavaScript.
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <a
+              href="#contact"
+              className="px-6 py-2 rounded-full bg-orange-500 hover:bg-orange-600 transition"
+            >
+              Contact
+            </a>
+
+            <a
+              href="https://github.com/dhananjaygangwar"
+              target="_blank"
+              className="px-6 py-2 rounded-full border border-white hover:bg-white hover:text-black transition"
+            >
+              GitHub
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -92,17 +95,17 @@ export default function Home() {
           <p>
             GitHub:{" "}
             <a
-              href="https://github.com/YOUR_GITHUB"
+              href="https://github.com/dhananjaygangwar"
               target="_blank"
               className="underline"
             >
-              github.com/YOUR_GITHUB
+              Dhananjay Gangwar
             </a>
           </p>
           <p>
             LinkedIn:{" "}
             <a
-              href="https://linkedin.com/in/YOUR_LINKEDIN"
+              href="https://www.linkedin.com/in/dhananjaygangwar/"
               target="_blank"
               className="underline"
             >
