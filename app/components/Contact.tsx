@@ -4,7 +4,7 @@ export default function Contact(){
         <h3 className="text-3xl font-bold mb-6">Contact</h3>
 
         <div className="text-gray-400 space-y-4">
-          <p>Email: yourmail@gmail.com</p>
+          <p>Email: kannu.2097@gmail.com</p>
           <p>
             GitHub:{" "}
             <a
