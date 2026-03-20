@@ -11,7 +11,7 @@ export function Navbar() {
   return (
     <nav>
       <a href="#hero" className="nav-logo">
-        dhananjay gangwar
+        dhananjay
       </a>
       <ul className="nav-links">
         {navItems.map((item, idx) => (

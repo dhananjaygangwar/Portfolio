@@ -27,9 +27,9 @@ export function About() {
 
         <div className="stat-grid">
           {[
-            { label: 'Location', val: 'Delhi', sub: '→ Germany soon' },
-            { label: 'Education', val: 'MSc', sub: 'Bioinformatics, Liverpool' },
-            { label: 'Primary Focus', val: 'APIs', sub: 'Backend & systems' },
+            { label: 'Location', val: 'New Delhi, India', sub: '--' },
+            { label: 'Education', val: 'B.Tech,  MSc', sub: 'Liverpool, United Kingdom' },
+            { label: 'Primary Focus', val: 'Backend & systems', sub: '--' },
             { label: 'Side Projects', val: 'C++', sub: 'Physics simulations' },
           ].map(({ label, val, sub }) => (
             <div key={label} className="stat-card">

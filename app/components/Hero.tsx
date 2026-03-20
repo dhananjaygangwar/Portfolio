@@ -6,7 +6,7 @@ export function Hero() {
 
       <div className="hero-info">
         <span>
-          Location <b>/ New Delhi, India → Berlin</b>
+          Location <b>/ New Delhi, India </b>
         </span>
         <span>
           Focus <b>/ Full Stack + Simulations</b>
@@ -18,7 +18,7 @@ export function Hero() {
 
       <div className="hero-status">
         <span className="status-dot" />
-        Available for opportunities
+        Open for opportunities
       </div>
 
       <h1 className="hero-name">
