@@ -8,7 +8,7 @@ import { Navbar } from './components/Navbar'
 import { ScrollReveal } from './components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Dhananjay Gangwar — Developer',
+  title: 'Dhananjay Gangwar ',
   description: 'Full Stack Developer. Next.js, Node.js, C++ simulations.',
 }
 
