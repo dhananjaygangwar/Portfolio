@@ -1,21 +1,29 @@
-export default function Navbar() {
-  return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20">
-      <div className="max-w-6xl mx-auto flex justify-center items-center px-6 py-4 text-white">
-        
-        <div className="space-x-10 text-lg font-semibold">
-          <a href="#about" className="hover:text-orange-400 transition">
-            About
-          </a>
-          <a href="#skills" className="hover:text-orange-400 transition">
-            Skills
-          </a>
-          <a href="#contact" className="hover:text-orange-400 transition">
-            Contact
-          </a>
-        </div>
+import React from 'react'
 
-      </div>
+const navItems = [
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+]
+
+export function Navbar() {
+  return (
+    <nav>
+      <a href="#hero" className="nav-logo">
+        dhananjay gangwar
+      </a>
+      <ul className="nav-links">
+        {navItems.map((item, idx) => (
+          <React.Fragment key={item.href}>
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+            {idx !== navItems.length - 1 ? <li className="nav-sep">|</li> : null}
+          </React.Fragment>
+        ))}
+      </ul>
     </nav>
-  );
+  )
 }
+

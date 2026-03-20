@@ -1,37 +1,63 @@
-export default function Skills(){
-    return(
-        <section id="skills" className="bg-gray-900 py-24 px-6">
-        <div className="grid md:grid-cols-2 gap-8">
+export function Skills() {
+  return (
+    <section id="skills">
+      <p className="sec-label">02 / Skills</p>
+      <h2 className="sec-title reveal">WHAT I BUILD WITH.</h2>
 
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition">
-            <h4 className="text-white font-semibold mb-3 text-lg">Backend</h4>
-            <p className="text-gray-300">
-            C#, ASP.NET Core, REST APIs, Authentication
-            </p>
-        </div>
-
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition">
-            <h4 className="text-white font-semibold mb-3 text-lg">Frontend</h4>
-            <p className="text-gray-300">
-            HTML, CSS, JavaScript
-            </p>
-        </div>
-
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition">
-            <h4 className="text-white font-semibold mb-3 text-lg">Database</h4>
-            <p className="text-gray-300">
-            PostgreSQL, SQL Server
-            </p>
-        </div>
-
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition">
-            <h4 className="text-white font-semibold mb-3 text-lg">Tools</h4>
-            <p className="text-gray-300">
-            Git, GitHub, Vercel
-            </p>
-        </div>
-
-        </div>
-      </section>
-    );
+      <div className="skills-grid reveal">
+        {[
+          {
+            icon: '⚙️',
+            title: 'Backend',
+            skills: [
+              { n: 'Node.js', h: true },
+              { n: 'NestJS', h: true },
+              { n: 'FastAPI', h: true },
+              { n: 'C# / ASP.NET', h: false },
+              { n: 'REST APIs', h: false },
+              { n: 'Auth / JWT', h: false },
+              { n: 'Python', h: false },
+            ],
+          },
+          {
+            icon: '🖥️',
+            title: 'Frontend',
+            skills: [
+              { n: 'Next.js', h: true },
+              { n: 'TypeScript', h: true },
+              { n: 'React', h: false },
+              { n: 'Tailwind CSS', h: false },
+              { n: 'JavaScript', h: false },
+              { n: 'HTML / CSS', h: false },
+            ],
+          },
+          {
+            icon: '🔬',
+            title: 'Simulations',
+            skills: [
+              { n: 'C++', h: true },
+              { n: 'OpenGL', h: true },
+              { n: 'GLSL Shaders', h: false },
+              { n: 'Numerical Methods', h: false },
+              { n: 'SQL / PostgreSQL', h: false },
+              { n: 'Git / GitHub', h: false },
+            ],
+          },
+        ].map(({ icon, title, skills }) => (
+          <div key={title} className="skill-card">
+            <div className="skill-icon">{icon}</div>
+            <h3 className="skill-title">{title}</h3>
+            <div className="skill-tags">
+              {skills.map(({ n, h }) => (
+                <span key={n} className={`skill-tag${h ? ' hot' : ''}`}>
+                  {n}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
 }
+
