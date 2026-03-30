@@ -23,18 +23,6 @@ A modern, glassmorphism-inspired developer portfolio built with Next.js and Tail
 - Tailwind CSS
 - React Icons
 - Vercel Deployment
-
----
-
-## ✨ Features
-
-- Glassmorphism hero section
-- Social media integration
-- Email copy-to-clipboard
-- Responsive layout
-- Clean resume section
-- Dark & light contrast sections
-
 ---
 
 ## 📬 Contact
