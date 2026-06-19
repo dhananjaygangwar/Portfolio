@@ -1,7 +1,7 @@
 export function Contact() {
   return (
     <section id="contact">
-      <p className="sec-label">04 / Contact</p>
+      <p className="sec-label">05 / Contact</p>
       <h2 className="sec-title reveal">LET&apos;S TALK.</h2>
 
       <div className="contact-grid reveal">
@@ -36,11 +36,11 @@ export function Contact() {
           {[
             {
               q: 'Are you open to relocating?',
-              a: 'Yes — actively targeting Germany within the next 3–4 months. Open to Berlin, Munich, Hamburg. Visa and logistics sorted.',
+              a: 'Yes — open to relocating within Europe and to remote-first teams. Visa and logistics are sorted; available within a few months.',
             },
             {
               q: 'What kind of roles are you looking for?',
-              a: 'Full stack or backend-leaning engineering roles. TypeScript, NestJS, Node.js primarily. Python / FastAPI secondary. Interested in product-driven teams.',
+              a: 'Full stack or backend-leaning engineering roles. TypeScript, NestJS, and Node.js primarily; Python / FastAPI secondary. I do my best work on product-driven teams that care about engineering quality.',
             },
             {
               q: "What's the deal with the simulations?",

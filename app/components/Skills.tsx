@@ -1,14 +1,13 @@
 export function Skills() {
   return (
     <section id="skills">
-      <p className="sec-label">02 / Skills</p>
-      <h2 className="sec-title reveal">WHAT I BUILD WITH.</h2>
+      <p className="sec-label">03 / Skills</p>
+      <h2 className="sec-title reveal">THE TOOLKIT.</h2>
 
-      <div className="skills-grid reveal">
+      <div className="skills-table reveal">
         {[
           {
-            icon: '⚙️',
-            title: 'Backend',
+            cat: 'Backend',
             skills: [
               { n: 'Node.js', h: true },
               { n: 'NestJS', h: true },
@@ -20,8 +19,7 @@ export function Skills() {
             ],
           },
           {
-            icon: '🖥️',
-            title: 'Frontend',
+            cat: 'Frontend',
             skills: [
               { n: 'Next.js', h: true },
               { n: 'TypeScript', h: true },
@@ -32,21 +30,19 @@ export function Skills() {
             ],
           },
           {
-            icon: '🔬',
-            title: 'Simulations',
+            cat: 'Systems & Tools',
             skills: [
               { n: 'C++', h: true },
               { n: 'OpenGL', h: true },
               { n: 'GLSL Shaders', h: false },
               { n: 'Numerical Methods', h: false },
-              { n: 'SQL / PostgreSQL', h: false },
+              { n: 'PostgreSQL', h: false },
               { n: 'Git / GitHub', h: false },
             ],
           },
-        ].map(({ icon, title, skills }) => (
-          <div key={title} className="skill-card">
-            <div className="skill-icon">{icon}</div>
-            <h3 className="skill-title">{title}</h3>
+        ].map(({ cat, skills }) => (
+          <div key={cat} className="skills-row">
+            <span className="skills-cat">{cat}</span>
             <div className="skill-tags">
               {skills.map(({ n, h }) => (
                 <span key={n} className={`skill-tag${h ? ' hot' : ''}`}>
@@ -60,4 +56,3 @@ export function Skills() {
     </section>
   )
 }
-

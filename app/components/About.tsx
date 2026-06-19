@@ -2,40 +2,45 @@ export function About() {
   return (
     <section id="about">
       <p className="sec-label">01 / About</p>
-      <h2 className="sec-title reveal">ABOUT ME.</h2>
+      <h2 className="sec-title reveal">ABOUT.</h2>
 
       <div className="about-grid reveal">
         <div className="about-text">
           <p>
-            Backend-focused developer with an MS in Bioinformatics from the University of Liverpool.
+            Backend-focused developer with an MSc in Bioinformatics from the University of Liverpool.
             I build <strong>scalable APIs, clean interfaces</strong>, and performance-driven systems —
-            currently deepening TypeScript and NestJS while targeting a move to Germany.
+            currently deepening TypeScript and NestJS.
           </p>
           <p>
-            Outside of web dev, I build <strong>science simulations in C++ and OpenGL</strong> —
+            Outside of web development, I build <strong>science simulations in C++ and OpenGL</strong> —
             gravitational systems, evolutionary models, and whatever physical phenomenon grabs my
-            attention next. Each simulation is a way of thinking: determinism, chaos, emergence, the
+            attention next. Each one is a way of thinking: determinism, chaos, emergence, and the
             limits of what can be known.
           </p>
           <p>
-            I work in shadows, prefer intellectual depth over hype, and think Nietzsche had the right
-            idea about building something that outlasts you.
+            I work with precision, value intellectual depth over hype, and believe the best systems —
+            technical or otherwise — are built to outlast the context they were born in.
           </p>
 
-          <div className="about-quote">&quot;In this world, winning is everything.&quot; — Ayanokoji</div>
+          <div className="about-quote">
+            &quot;In this world, winning is everything.&quot; — Ayanokoji
+          </div>
         </div>
 
-        <div className="stat-grid">
+        <div className="about-facts">
           {[
-            { label: 'Location', val: 'New Delhi, India', sub: '--' },
-            { label: 'Education', val: 'B.Tech,  MSc', sub: 'Liverpool, United Kingdom' },
-            { label: 'Primary Focus', val: 'Backend & systems', sub: '--' },
-            { label: 'Side Projects', val: 'C++', sub: 'Physics simulations' },
-          ].map(({ label, val, sub }) => (
-            <div key={label} className="stat-card">
-              <p className="stat-label">{label}</p>
-              <p className="stat-val">{val}</p>
-              <p className="stat-sub">{sub}</p>
+            { label: 'Based in', value: 'New Delhi, India' },
+            { label: 'Education', value: 'B.Tech · MSc', note: 'University of Liverpool, UK' },
+            { label: 'Focus', value: 'Backend & Systems' },
+            { label: 'Languages', value: 'English · Hindi' },
+            { label: 'Availability', value: 'Open · Relocatable' },
+          ].map(({ label, value, note }) => (
+            <div key={label} className="about-fact">
+              <span className="fact-label">{label}</span>
+              <span className="fact-right">
+                <span className="fact-val">{value}</span>
+                {note && <span className="fact-note">{note}</span>}
+              </span>
             </div>
           ))}
         </div>
@@ -43,4 +48,3 @@ export function About() {
     </section>
   )
 }
-

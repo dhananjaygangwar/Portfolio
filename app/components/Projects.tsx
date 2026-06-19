@@ -1,7 +1,7 @@
 export function Projects() {
   return (
     <section id="projects">
-      <p className="sec-label">03 / Projects</p>
+      <p className="sec-label">04 / Projects</p>
 
       <div className="projects-intro reveal">
         <h2 className="sec-title" style={{ marginBottom: 0 }}>
@@ -10,64 +10,67 @@ export function Projects() {
           BUILDING.
         </h2>
         <p className="projects-intro-text">
-          Web projects are under active development. Simulation portfolio tells a cohesive story
-          across physics, biology, consciousness, and information theory — each one a thinking
-          experiment rendered in code.
+          Simulation portfolio tells a cohesive story across physics, biology, and information theory.
+          Web projects under active development — each one built with intention.
         </p>
       </div>
 
-      <div className="projects-grid reveal">
+      <div className="projects-list reveal">
         {[
           {
+            num: '01',
             badge: 'live',
             bl: 'Completed',
-            icon: '🌌',
             title: 'Three-Body Gravity',
             desc: 'Gravitational simulation of three bodies in mutual orbit. Runge-Kutta integration, real-time rendering. A meditation on chaos and determinism — tiny perturbations, wildly different fates.',
             tech: ['C++', 'OpenGL', 'GLSL', 'Physics'],
             dim: false,
           },
           {
+            num: '02',
             badge: 'live',
             bl: 'Completed',
-            icon: '🧬',
             title: 'Digital Evolution',
             desc: 'Entities evolve over generations via selection pressure and mutation. Emergent behavior arises from simple rules. A visual argument for complexity without a designer.',
-            tech: ['C++', 'OpenGL', 'Genetic Algo', 'Emergence'],
+            tech: ['C++', 'OpenGL', 'Genetic Algorithm', 'Emergence'],
             dim: false,
           },
           {
+            num: '03',
             badge: 'dev',
             bl: 'In Development',
-            icon: '⚫',
             title: 'Black Hole Accretion Disk',
             desc: 'Relativistic accretion disk simulation with Doppler beaming, gravitational lensing approximations, and thermal emission gradients. Next in the simulation arc.',
-            tech: ['C++', 'OpenGL', 'GLSL', 'GR approx'],
+            tech: ['C++', 'OpenGL', 'GLSL', 'General Relativity'],
             dim: true,
           },
           {
+            num: '04',
             badge: 'dev',
             bl: 'In Development',
-            icon: '🤖',
             title: 'Chatbot Platform',
             desc: 'Conversational AI application built at Travash Software Solutions. Full-stack architecture with NLP integration, scalable backend, and real-time messaging.',
             tech: ['React', 'Node.js', 'FastAPI', 'Python'],
             dim: true,
           },
           {
+            num: '05',
             badge: 'planned',
             bl: 'Coming Soon',
-            icon: '🔌',
-            title: 'Project Slot Open',
-            desc: 'Next web project incoming. Stack will include Next.js, NestJS, TypeScript — likely something in the API-first / developer-tooling space. Watch this space.',
-            tech: ['Next.js', 'NestJS', 'TypeScript'],
+            title: 'Developer Tooling — TBD',
+            desc: 'Next web project in the pipeline. API-first, developer-tooling space. Stack will include Next.js, NestJS, and TypeScript.',
+            tech: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL'],
             dim: true,
           },
-        ].map(({ badge, bl, icon, title, desc, tech, dim }) => (
-          <div key={title} className={`proj-card${dim ? ' dim' : ''}`}>
-            <span className={`proj-badge badge-${badge}`}>{bl}</span>
-            <div className="proj-icon">{icon}</div>
-            <h3 className="proj-title">{title}</h3>
+        ].map(({ num, badge, bl, title, desc, tech, dim }) => (
+          <div key={title} className={`proj-item${dim ? ' dim' : ''}`}>
+            <div className="proj-item-top">
+              <div className="proj-item-left">
+                <span className="proj-num">{num}</span>
+                <h3 className="proj-title">{title}</h3>
+              </div>
+              <span className={`proj-badge badge-${badge}`}>{bl}</span>
+            </div>
             <p className="proj-desc">{desc}</p>
             <div className="proj-tech">
               {tech.map((t) => (
@@ -77,14 +80,10 @@ export function Projects() {
           </div>
         ))}
 
-        <div className="proj-cta">
-          <div>
-            <h3 className="proj-cta-title">More simulations &amp; web projects on the way.</h3>
-            <p className="proj-cta-sub">
-              Consciousness models, information theory visualizations, and full-stack SaaS
-              projects in the pipeline. Each built with intention.
-            </p>
-          </div>
+        <div className="proj-footer">
+          <p className="proj-footer-text">
+            Consciousness models, information theory visualizations, and full-stack SaaS projects in the pipeline.
+          </p>
           <a
             href="https://github.com/dhananjaygangwar"
             target="_blank"
@@ -98,4 +97,3 @@ export function Projects() {
     </section>
   )
 }
-
