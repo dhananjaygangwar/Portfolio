@@ -19,10 +19,8 @@ export function Cursor() {
       return
     }
 
-    let mx = -100
-    let my = -100
-    let rx = -100
-    let ry = -100
+    let mx = -100, my = -100
+    let rx = -100, ry = -100
 
     const onMove = (e: MouseEvent) => {
       mx = e.clientX
@@ -34,19 +32,17 @@ export function Cursor() {
     let rafId = 0
     const tick = () => {
       dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`
-
       rx += (mx - rx) * 0.12
       ry += (my - ry) * 0.12
       ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`
-
-      rafId = window.requestAnimationFrame(tick)
+      rafId = requestAnimationFrame(tick)
     }
 
-    rafId = window.requestAnimationFrame(tick)
+    rafId = requestAnimationFrame(tick)
 
     return () => {
       window.removeEventListener('mousemove', onMove)
-      window.cancelAnimationFrame(rafId)
+      cancelAnimationFrame(rafId)
     }
   }, [])
 
@@ -57,4 +53,3 @@ export function Cursor() {
     </>
   )
 }
-
