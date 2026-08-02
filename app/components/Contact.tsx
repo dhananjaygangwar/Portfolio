@@ -40,7 +40,7 @@ export function Contact() {
             },
             {
               q: 'What kind of roles are you looking for?',
-              a: 'Full stack or backend-leaning engineering roles. TypeScript, NestJS, and Node.js primarily; Python / FastAPI secondary. I do my best work on product-driven teams that care about engineering quality.',
+              a: 'Full stack or backend-leaning engineering roles. C# / .NET and TypeScript primarily; Python / FastAPI secondary. I do my best work on product-driven teams that care about engineering quality.',
             },
             {
               q: "What's the deal with the simulations?",

@@ -26,7 +26,7 @@ export function Hero() {
         <div className="hero-bottom">
           <p className="hero-desc">
             I design and ship <strong>backend systems and full-stack web apps</strong> — TypeScript,
-            NestJS, Node. Off the clock, I build <strong>physics simulations in C++</strong> to think
+            C# / .NET, Node. Off the clock, I build <strong>physics simulations in C++</strong> to think
             through chaos, emergence, and the limits of computation.
           </p>
           <div className="btn-group">
@@ -44,7 +44,7 @@ export function Hero() {
           <b>Local time</b> <LocalTime />
         </span>
         <span className="meta-item">
-          <b>Stack</b> Next.js · Node · C++ · Python
+          <b>Stack</b> .NET · Next.js · C++ · Python
         </span>
       </div>
     </section>

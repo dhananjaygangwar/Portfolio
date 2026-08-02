@@ -9,7 +9,7 @@ export function About() {
           <p>
             Backend-focused developer with an MSc in Bioinformatics from the University of Liverpool.
             I build <strong>scalable APIs, clean interfaces</strong>, and performance-driven systems —
-            currently deepening TypeScript and NestJS.
+            currently deepening TypeScript and .NET.
           </p>
           <p>
             Outside of web development, I build <strong>science simulations in C++ and OpenGL</strong> —
@@ -32,7 +32,7 @@ export function About() {
             { label: 'Based in', value: 'New Delhi, India' },
             { label: 'Education', value: 'B.Tech · MSc', note: 'University of Liverpool, UK' },
             { label: 'Focus', value: 'Backend & Systems' },
-            { label: 'Languages', value: 'English · Hindi' },
+            { label: 'Languages', value: 'English · Hindi · German' },
             { label: 'Availability', value: 'Open · Relocatable' },
           ].map(({ label, value, note }) => (
             <div key={label} className="about-fact">

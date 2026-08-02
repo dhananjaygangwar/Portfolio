@@ -58,8 +58,8 @@ export function Projects() {
             badge: 'planned',
             bl: 'Coming Soon',
             title: 'Developer Tooling — TBD',
-            desc: 'Next web project in the pipeline. API-first, developer-tooling space. Stack will include Next.js, NestJS, and TypeScript.',
-            tech: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL'],
+            desc: 'Next web project in the pipeline. API-first, developer-tooling space. Stack will include Next.js, .NET, and TypeScript.',
+            tech: ['Next.js', '.NET', 'TypeScript', 'PostgreSQL'],
             dim: true,
           },
         ].map(({ num, badge, bl, title, desc, tech, dim }) => (

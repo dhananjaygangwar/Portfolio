@@ -9,10 +9,10 @@ export function Skills() {
           {
             cat: 'Backend',
             skills: [
+              { n: 'C# / .NET', h: true },
+              { n: 'ASP.NET Core', h: true },
               { n: 'Node.js', h: true },
-              { n: 'NestJS', h: true },
-              { n: 'FastAPI', h: true },
-              { n: 'C# / ASP.NET', h: false },
+              { n: 'FastAPI', h: false },
               { n: 'REST APIs', h: false },
               { n: 'Auth / JWT', h: false },
               { n: 'Python', h: false },
